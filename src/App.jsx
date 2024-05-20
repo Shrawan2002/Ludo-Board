@@ -5,8 +5,6 @@ function App() {
 
   return (
     <>
-
-    <p>Hi i am dev</p>
     <LudoBoard/>
     </>
   )

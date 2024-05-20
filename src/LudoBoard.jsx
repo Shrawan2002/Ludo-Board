@@ -6,6 +6,23 @@ export default function LudoBoard(){
             return {...prevMoves,blue:moves.blue+1};
         })
     }
+    let UpdateRed = ()=>{
+        setMoves( (prevMoves)=>{
+            return {...prevMoves,red:moves.red+1};
+        })
+    }
+
+    let UpdateGreen = ()=>{
+        setMoves( (prevMoves)=>{
+            return {...prevMoves,green:moves.green+1};
+        })
+    }
+
+    let updateYellow = ()=>{
+        setMoves( (prevMoves)=>{
+            return {...prevMoves,yellow:moves.yellow+1};
+        })
+    }
     return(
         <div>
             <p>Game Begins</p>
@@ -13,11 +30,11 @@ export default function LudoBoard(){
                 <p>Blue Moves={moves.blue}</p>
                 <button style={{backgroundColor:"blue"}} onClick={UpdateBlue} > +1</button>
                 <p>Red Moves= {moves.red} </p>
-                <button style={{backgroundColor:"red"}}> +1</button>
+                <button style={{backgroundColor:"red"}} onClick={UpdateRed}> +1</button>
                 <p>Green Moves= {moves.green} </p>
-                <button style={{backgroundColor:"green"}}> +1</button>
+                <button style={{backgroundColor:"green"}} onClick={UpdateGreen} > +1</button>
                 <p>Yellow Moves= {moves.yellow} </p>
-                <button style={{backgroundColor:"yellow"}}> +1</button>
+                <button style={{backgroundColor:"yellow"}} onClick={updateYellow} > +1</button>
             </div>
         </div>
     )
